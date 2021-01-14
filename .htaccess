@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+DirectoryIndex index.php?id=1
+
+RewriteRule ^page-([0-9]+).html$ index.php?id=$1 [L]
+
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule  . index.php?e=1 [L]
+
+
